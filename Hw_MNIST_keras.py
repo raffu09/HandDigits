@@ -132,6 +132,7 @@ def build_model():
     # model = tflearn.DNN(net)
     
     # previous turned to the keras, quite similar but even simpler
+    # NO more simpler as convolutional layer added, BTW: here you could remove the next Dense layer
     model = Sequential()
     model.add(Conv2D(32, (3, 3), input_shape=( trainX.shape[1], trainX.shape[2], 1), kernel_initializer='uniform', activation='relu'))
     model.add(MaxPooling2D(pool_size=(2,2)))
